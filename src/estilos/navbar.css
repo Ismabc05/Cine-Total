@@ -1,0 +1,40 @@
+body {
+    margin: 0;  /* Quita margen del body */
+    padding: 0;
+}
+
+.contenedor-navbar {
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: #ffffff; /* Fondo negro */
+    padding: 1rem 0;
+}
+
+.lista-navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    gap: 2rem;
+}
+
+.lista-navbar li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.lista-navbar li a:hover {
+    color: #ff3f6c;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .lista-navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
