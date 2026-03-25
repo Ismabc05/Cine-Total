@@ -1,4 +1,7 @@
 import { useSeries } from "../hooks/useSeries"
+import "../estilos/series.css"
+import { ImFilm } from "react-icons/im";
+
 
 const Series = () => {
     const { data, isLoading, error } = useSeries();
@@ -8,7 +11,12 @@ const Series = () => {
 
     return (
         <div className="series-container">
-            <h1>Series</h1>
+            
+            <div className="series-header">
+                <ImFilm className="icono" />
+                <p className="parrafo-series">Series online gratis</p>
+            </div>
+
             <div className="series-list">
                 {data.results.map((serie: any) => {
                     const posterUrl = serie.poster_path

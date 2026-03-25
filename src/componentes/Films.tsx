@@ -1,4 +1,6 @@
 import { useMovies } from "../hooks/useMovies"
+import "../estilos/films.css"
+import { MdLiveTv } from "react-icons/md";
 
 
 const Films = () => {
@@ -9,27 +11,32 @@ const Films = () => {
     if(error) return <p>Error al cargar las peliculas</p>
 
     return(
-            <div className="series-container">
-                <h1>Peliculas</h1>
-                <div className="series-list">
+            <div className="peliculas-container">
+
+                <div className="peliculas-header">
+                    <MdLiveTv className="icono" />
+                    <p className="peliculas-series">Peliculas online gratis</p>
+                </div>
+
+                <div className="peliculas-list">
                     {data.results.map((film: any) => {
                     const posterUrl = film.poster_path
                         ? `https://image.tmdb.org/t/p/w300${film.poster_path}`
                         : "https://via.placeholder.com/500x750?text=Sin+Imagen"; // fallback
 
                     return (
-                        <div key={film.id} className="serie-card">
+                        <div key={film.id} className="peliculas-card">
                             <img
                                 src={posterUrl}
-                                alt={film.name}
-                                className="serie-poster"
+                                alt={film.title}
+                                className="peliculas-poster"
                             />
-                            <p className="serie-name">{film.title}</p>
+                            <p className="peliculas-name">{film.title}</p>
                         </div>
                     );
-                })}
+                    })}
+                </div>
             </div>
-        </div>
     )
 }
 

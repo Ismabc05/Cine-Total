@@ -1,0 +1,87 @@
+.peliculas-container {
+  padding: 20px;
+  background-color: #0f172a; /* fondo oscuro */
+  color: white;
+}
+
+.peliculas-container h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.peliculas-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+/* Card */
+.peliculas-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover efecto */
+.peliculas-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Imagen */
+.peliculas-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay oscuro */
+.peliculas-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+/* Título encima de la imagen */
+.peliculas-name {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.peliculas-year {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #1e293b;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 6px;
+  z-index: 2;
+}
+
+.peliculas-series{
+  text-align: left;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.peliculas-header {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre icono y texto */
+  margin-bottom: 20px;
+}
+
+.peliculas-series {
+  margin: 0; /* 🔥 importante para quitar separación rara */
+  font-weight: 600;
+}

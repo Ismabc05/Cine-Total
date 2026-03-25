@@ -5,31 +5,71 @@ body {
 
 .contenedor-navbar {
     width: 100%; /* Ocupa todo el ancho */
-    background-color: #ffffff; /* Fondo negro */
+    background-color: #0f172a; /* fondo oscuro */
     padding: 1rem 0;
 }
 
+/* Menú centrado REAL */
 .lista-navbar {
     list-style: none;
-    margin: 0;
+    margin: 0 auto; /* 🔥 centra el menú */
     padding: 0;
-    
+
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;
     gap: 2rem;
 }
 
+
 .lista-navbar li a {
+    display: flex;            /* 🔥 clave */
+    align-items: center;      /* centra vertical */
+    gap: 8px;                 /* espacio icono-texto */
     text-decoration: none;
-    color: #000000;
-    font-weight: 500;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
     transition: color 0.3s, transform 0.2s;
+}
+
+/* Iconos */
+.icono {
+    font-size: 16px;
+    color: #38bdf8; /* azul como en la imagen */
 }
 
 .lista-navbar li a:hover {
     color: #ff3f6c;
     transform: scale(1.05);
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo izquierda */
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+}
+
+.buscador {
+  display: flex;
+  justify-content: flex-end; /* 👉 lo manda a la derecha */
+  margin-top: 20px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.buscador svg {
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {

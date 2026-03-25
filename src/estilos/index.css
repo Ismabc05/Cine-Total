@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap');
 
 #root {
   width: 1126px;
@@ -15,7 +15,8 @@
 
 body {
   margin: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: #0f172a; /* fondo oscuro */
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 h1,
