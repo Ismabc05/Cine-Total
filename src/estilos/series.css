@@ -86,3 +86,11 @@
   font-weight: 600;
 }
 
+.series-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+

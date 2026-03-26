@@ -4,6 +4,6 @@ import { fetchSeries } from "../servicios/fetchSeries";
 export const useSeries = () => {
     return useQuery({
         queryKey: ["series"],
-        queryFn: fetchSeries
+        queryFn: fetchSeries,
     })
 }

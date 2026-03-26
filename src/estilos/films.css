@@ -85,3 +85,8 @@
   margin: 0; /* 🔥 importante para quitar separación rara */
   font-weight: 600;
 }
+
+.peliculas-list a {
+  text-decoration: none;
+  color: inherit;
+}
