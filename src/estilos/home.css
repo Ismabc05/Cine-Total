@@ -1,0 +1,32 @@
+.inicio-container {
+  background-color: #0f172a;
+  color: white;
+  padding: 20px;
+}
+
+/* HERO (titulo + texto) */
+.inicio-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.inicio-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.inicio-hero p {
+  font-size: 16px;
+  color: #cbd5f5;
+}
+
+/* SECCIONES */
+.inicio-section {
+  margin-bottom: 40px;
+}
+
+.inicio-section h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
