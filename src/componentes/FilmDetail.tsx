@@ -19,6 +19,9 @@ const FilmDetail = () => {
     const backdropUrl = data.backdrop_path
         ? `https://image.tmdb.org/t/p/original${data.backdrop_path}`
         : "";
+    
+
+    const imdbUrl = `https://www.imdb.com/title/${data.imdb_id}`
 
     return(
         <div 
@@ -52,13 +55,15 @@ const FilmDetail = () => {
                             📅 {data.release_date} • ⏱️ {data.runtime} min
                         </p>
 
-                        <p className="overview">
+                        <p className="overview"> 
                             {data.overview}
                         </p>
 
-                        <button className="watch-btn">
-                            ▶ Ver ahora
-                        </button>
+                        <a href={imdbUrl} target="blank" rel="noopener noreferrer">
+                            <button className="watch-btn">
+                                ▶ Ver trailer
+                            </button>
+                        </a>
                     </div>
 
                 </div>

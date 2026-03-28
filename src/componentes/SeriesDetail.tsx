@@ -2,11 +2,13 @@ import { useParams, useNavigate } from "react-router-dom"
 import { useSeriesId } from "../hooks/useSeriesId"
 import { FaArrowLeftLong } from "react-icons/fa6";
 import "../estilos/detail.css"
+import { useSeriesLink } from "../hooks/useSeriesLink";
 
 const SeriesDetail = () => {
 
     const { id } = useParams()
     const { data, isLoading, error } = useSeriesId(id!)
+    const { data: externalData } = useSeriesLink(id!)
     const navegar = useNavigate()
 
     if (isLoading) return <p className="loading">Cargando...</p>
@@ -19,6 +21,8 @@ const SeriesDetail = () => {
     const backdropUrl = data.backdrop_path
         ? `https://image.tmdb.org/t/p/original${data.backdrop_path}`
         : "";
+
+    const imdbId = externalData?.imdb_id
 
     return(
         <div 
@@ -57,9 +61,11 @@ const SeriesDetail = () => {
                             {data.overview}
                         </p>
 
-                        <button className="watch-btn">
-                            ▶ Ver ahora
-                        </button>
+                        <a href={`https://www.imdb.com/title/${imdbId}`} target="blank" rel="noopener noreferrer">
+                            <button className="watch-btn">
+                                ▶ Ver trailer
+                            </button>  
+                        </a>
                     </div>
 
                 </div>
